@@ -25,7 +25,7 @@ namespace SignalRApi.Controllers
         {
             //var categories = _categoryService.TGetListAll();
             //return Ok(categories);
-            var values = _mapper.Map<ResultCategoryDto>(_categoryService.TGetListAll());
+            var values = _mapper.Map<List<ResultCategoryDto>>(_categoryService.TGetListAll());
             return Ok(values);
         }
         [HttpPost]
