@@ -1,4 +1,6 @@
-﻿namespace SignalR.EntityLayer.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SignalR.EntityLayer.Entities
 {
     public class Product
     {
@@ -8,5 +10,8 @@
         public decimal Price { get; set;}
         public string ImageUrl { get; set; }
         public bool ProductStatus { get; set; }
+        public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
+        public Category Category { get; set; }
     }
 }
