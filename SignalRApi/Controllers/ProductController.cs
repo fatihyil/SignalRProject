@@ -28,7 +28,7 @@ namespace SignalRApi.Controllers
         [HttpGet("GetProduct")]
         public IActionResult GetProduct(int id)
         {
-            var product = _mapper.Map<GetProductDto>(_productService.TGetById(id));
+            var product = _mapper.Map<ResultProductDto>(_productService.TGetById(id));
             return Ok(product);
         }
         [HttpPost]
